@@ -1,0 +1,11 @@
+*.DS_Store
+*.log
+*.zip
+/cache/
+/applications/
+/kazisearchlib/
+/test/
+/uploads/
+/vendor/
+TODO
+
