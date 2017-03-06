@@ -11,11 +11,11 @@
 /viewerjs/
 TODO
 /applications/*
-!application/Contacts/
-!application/Media/
-!application/Notification/
-!application/Search/
-!application/Setup/
-!application/System/
-!application/Users/
+!/application/Contacts/
+!/application/Media/
+!/application/Notification/
+!/application/Search/
+!/application/Setup/
+!/application/System/
+!/application/Users/
 
