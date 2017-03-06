@@ -10,7 +10,6 @@
 /vendor/
 /viewerjs/
 TODO
-!application/
 /applications/*
 !application/Contacts/
 !application/Media/
