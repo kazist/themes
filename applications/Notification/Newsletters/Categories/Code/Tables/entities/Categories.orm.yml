@@ -1,0 +1,62 @@
+Notification\Newsletters\Categories\Code\Tables\Categories:
+  table: notification_newsletters_categories
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    parent_id:
+      name: parent_id
+      type: integer
+      length: 11
+      nullable: true
+    frequency_id:
+      name: frequency_id
+      type: integer
+      length: 11
+      nullable: false
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    description:
+      name: description
+      type: text
+      nullable: true
+    image:
+      name: image
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  indexes:
+    parent_id_index:
+      columns: [parent_id]
+    frequency_id_index:
+      columns: [frequency_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

@@ -1,0 +1,568 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "email Detail",
+                                            "unique_name": "email_detail",
+                                            "has_title": 1,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "subject",
+                                                "body",
+                                                "sent_counter",
+                                                "completed",
+                                                "params",
+                                                "recipients",
+                                                "parameters",
+                                                "attachments",
+                                                "priority",
+                                                "email_type",
+                                                "send_date",
+                                                "uniq_name"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "Other Detail",
+                                            "unique_name": "other_detail",
+                                            "has_title": 1,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "id",
+                                                "date_modified",
+                                                "modified_by",
+                                                "date_created",
+                                                "created_by"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": []
+        },
+        "table": {
+            "fields": [
+                "subject",
+                "send_date",
+                "priority",
+                "email_type",
+                "sent_counter",
+                "completed"
+            ],
+            "has_label": [
+                "subject",
+                "send_date",
+                "priority",
+                "email_type",
+                "sent_counter",
+                "completed"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [],
+        "group": [],
+        "field": []
+    },
+    "customhtmls": [],
+    "fields": [
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subject",
+            "html_type": "text",
+            "mysql_type": "text",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "body",
+            "html_type": "textarea",
+            "mysql_type": "text",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": {
+                    "col": "",
+                    "row": ""
+                },
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "send_date",
+            "html_type": "datetime",
+            "mysql_type": "datetime",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "recipients",
+            "html_type": "text",
+            "mysql_type": "text",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "parameters",
+            "html_type": "text",
+            "mysql_type": "text",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "attachments",
+            "html_type": "text",
+            "mysql_type": "text",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "priority",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "email_type",
+            "html_type": "select",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "customs": [
+                        {
+                            "value": "direct",
+                            "text": "direct"
+                        },
+                        {
+                            "value": "prepared",
+                            "text": "prepared"
+                        }
+                    ],
+                    "data_source": "custom"
+                },
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "sent_counter",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "completed",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "params",
+            "html_type": "textarea",
+            "mysql_type": "text",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": {
+                    "col": "",
+                    "row": ""
+                },
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "uniq_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "notification_emails",
+    "table_alias": "ne",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "id"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "emails",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Notification\\Emails\\Code\\Tables\\Emails",
+            "alias": "ne",
+            "name": "#__notification_emails"
+        },
+        "select": [
+            "ne.id",
+            "ne.subject",
+            "ne.body",
+            "ne.send_date",
+            "ne.recipients",
+            "ne.parameters",
+            "ne.attachments",
+            "ne.priority",
+            "ne.email_type",
+            "ne.sent_counter",
+            "ne.completed",
+            "ne.params",
+            "ne.uniq_name",
+            "ne.created_by",
+            "ne.date_created",
+            "ne.modified_by",
+            "ne.date_modified"
+        ]
+    }
+}

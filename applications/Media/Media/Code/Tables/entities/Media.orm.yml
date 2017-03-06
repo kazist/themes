@@ -1,0 +1,72 @@
+Media\Media\Code\Tables\Media:
+  table: media_media
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    file:
+      name: file
+      type: string
+      length: '255'
+      nullable: false
+    route:
+      name: route
+      type: string
+      length: 255
+    type:
+      name: type
+      type: string
+      length: 255
+      nullable: true
+    field_name:
+      name: field_name
+      type: string
+      length: '255'
+      nullable: true
+    not_found:
+      name: not_found
+      type: integer
+      length: 11
+      nullable: true
+    is_analyzed:
+      name: is_analyzed
+      type: integer
+      length: 11
+      nullable: true
+    extension:
+      name: extension
+      type: string
+      length: 255
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

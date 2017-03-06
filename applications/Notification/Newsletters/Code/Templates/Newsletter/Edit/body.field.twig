@@ -1,0 +1,6 @@
+{# empty Twig template #}
+
+{% import "form.macro.twig" as forms %}
+{% set body = getContext('body') %}
+
+{{ forms.input( 'body', 'editor', body, 'Body' ) }}

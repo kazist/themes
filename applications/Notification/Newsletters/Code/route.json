@@ -1,0 +1,176 @@
+{
+    "frontend": [{
+            "title": "Newsletter List",
+            "description": "Management of Newsletters.",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\NewslettersController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "notification.newsletters",
+            "route": "notification/newsletters",
+            "arguments": "",
+            "keywords": "newsletter, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view"],
+                "ADMIN": ["can_view"],
+                "MODERATOR": ["can_view"],
+                "USER": ["can_view"]
+            }
+
+        }, {
+            "title": "Newsletter Detail: {{ item.name }}",
+            "description": "Newsletter Detail: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\NewslettersController::detailAction",
+            "unique_name": "notification.newsletters.detail",
+            "route": "notification/newsletters/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "newsletter, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view"],
+                "ADMIN": ["can_view"],
+                "MODERATOR": ["can_view"],
+                "USER": ["can_view"]
+            }
+        }, {
+            "title": "Newsletter Cron",
+            "description": "Newsletter Cron",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\NewslettersController::cronnewsletterAction",
+            "unique_name": "notification.newsletters.cronnewsletter",
+            "route": "notification/newsletters/cronnewsletter","permissions": "can_view, can_viewown",
+            "arguments": {},
+            "keywords": "newsletter, cronnewsletter, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+
+        }]
+    ,
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::taskAction",
+            "unique_name": "admin.notification.newsletters.task",
+            "route": "admin/notification/newsletters/task",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": "",
+            "keywords": "newsletters, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Newsletter List",
+            "description": "Management of Newsletters.",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.notification.newsletters",
+            "route": "admin/notification/newsletters",
+            "arguments": "",
+            "keywords": "newsletter, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Newsletter ",
+            "description": "Add Newsletter .",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::addAction",
+            "unique_name": "admin.notification.newsletters.add",
+            "route": "admin/notification/newsletters/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "newsletter,add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Newsletter {{ item.name }}",
+            "description": "Edit Newsletter {{ item.name }}.",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::editAction",
+            "unique_name": "admin.notification.newsletters.edit",
+            "route": "admin/notification/newsletters/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "newsletter, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Newsletter Detail: {{ item.name }}",
+            "description": "Newsletter Detail: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::detailAction",
+            "unique_name": "admin.notification.newsletters.detail",
+            "route": "admin/notification/newsletters/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "newsletter, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Newsletter Delete: {{ item.name }}",
+            "description": "Newsletter Delete: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::deleteAction",
+            "unique_name": "admin.notification.newsletters.delete",
+            "route": "admin/notification/newsletters/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "newsletter, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Newsletter Save: {{ item.name }}",
+            "description": "Newsletter Save: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Code\\Controllers\\Admin\\NewslettersController::saveAction",
+            "unique_name": "admin.notification.newsletters.save",
+            "route": "admin/notification/newsletters/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "newsletter, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

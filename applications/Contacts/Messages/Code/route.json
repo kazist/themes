@@ -1,0 +1,222 @@
+{
+    "frontend": [{
+            "title": "Messages List",
+            "description": "Management of Messages.",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\MessagesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "contacts.messages",
+            "route": "contacts/messages",
+            "arguments": "",
+            "keywords": "messages, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Messages Detail: {{ item.name }}",
+            "description": "Messages Detail: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\MessagesController::detailAction",
+            "unique_name": "contacts.messages.detail",
+            "route": "contacts/messages/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "messages, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Send Message  ",
+            "description": "Send Message .",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\MessagesController::addAction",
+            "unique_name": "contacts.messages.add",
+            "route": "contacts/messages/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "category, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"],
+                "MODERATOR": ["can_add"],
+                "USER": ["can_add"]
+            }
+        }, {
+            "title": "Save Message Send : {{ item.name }}",
+            "description": "Save Message Send: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\MessagesController::saveAction",
+            "unique_name": "contacts.messages.save",
+            "route": "contacts/messages/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"],
+                "MODERATOR": ["can_add", "can_write", "can_writeown"],
+                "USER": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Save Message Send : {{ item.name }}",
+            "description": "Save Message Send: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\MessagesController::thankyouAction",
+            "unique_name": "contacts.messages.thankyou",
+            "route": "contacts/messages/thankyou/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "thankyou, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"],
+                "MODERATOR": ["can_add", "can_write", "can_writeown"],
+                "USER": ["can_add", "can_write", "can_writeown"]
+            }
+        }],
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::taskAction",
+            "unique_name": "admin.contacts.messages.task",
+            "route": "admin/contacts/messages/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "messages, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Messages List",
+            "description": "Management of Messages.",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.contacts.messages",
+            "route": "admin/contacts/messages",
+            "arguments": "",
+            "keywords": "category, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Messages  ",
+            "description": "Add Messages .",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::addAction",
+            "unique_name": "admin.contacts.messages.add",
+            "route": "admin/contacts/messages/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "category, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Messages {{ item.name }}",
+            "description": "Edit Messages {{ item.name }}.",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::editAction",
+            "unique_name": "admin.contacts.messages.edit",
+            "route": "admin/contacts/messages/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Messages Detail: {{ item.name }}",
+            "description": "Messages Detail: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::detailAction",
+            "unique_name": "admin.contacts.messages.detail",
+            "route": "admin/contacts/messages/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Messages Delete: {{ item.name }}",
+            "description": "Messages Delete: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::deleteAction",
+            "unique_name": "admin.contacts.messages.delete",
+            "route": "admin/contacts/messages/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Messages Save: {{ item.name }}",
+            "description": "Messages Save: {{ item.name }}",
+            "controller": "Contacts\\Messages\\Code\\Controllers\\Admin\\MessagesController::saveAction",
+            "unique_name": "admin.contacts.messages.save",
+            "route": "admin/contacts/messages/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

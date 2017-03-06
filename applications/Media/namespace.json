@@ -1,0 +1,14 @@
+{
+    "MediaMedia": {
+        "namespace": "Media\\Media",
+        "controller": "MediaController"
+    },
+    "MediaSizes": {
+        "namespace": "Media\\Sizes",
+        "controller": "SizesController"
+    },
+    "MediaUsage": {
+        "namespace": "Media\\Usage",
+        "controller": "UsageController"
+    }
+}

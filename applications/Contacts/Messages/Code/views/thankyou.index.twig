@@ -1,0 +1,16 @@
+{# empty Twig template #}
+
+<h1 class="component-header">Thank you {{ message.name }} for your contact.</h1>
+
+Dear {{ message.name }}, Your email from {{ message.email }} will be received 
+and someone will be looking at it shortly. We are committed to resolving every 
+ticket as promptly as possible, and we encourage you to let us know if you have 
+any additional concerns or questions. You will receive an email when any action 
+has been taken on your ticket.
+
+<div class="text-center">
+    <a class="btn btn-success" href="{{ generate_url('contacts.contacts') }}">
+        <i class="fa fa-arrow-left"></i>
+        Go to Contact List
+    </a>
+</div>

@@ -1,0 +1,31 @@
+[{
+        "tracking_id": "1",
+        "title": "Article",
+        "alias": "article",
+        "table_name": "cms_articles",
+        "title_field": "title",
+        "content_field": "article",
+        "image_field": "image",
+        "published": "1",
+        "is_processed": "0"
+    }, {
+        "tracking_id": "2",
+        "title": "Blog",
+        "alias": "blog",
+        "table_name": "cms_blogs",
+        "title_field": "title",
+        "content_field": "blog",
+        "image_field": "image",
+        "published": "1",
+        "is_processed": "0"
+    }, {
+        "tracking_id": "3",
+        "title": "Feeds Articles",
+        "alias": "feeds",
+        "table_name": "feeds_articles",
+        "title_field": "title",
+        "content_field": "content",
+        "image_field": "image",
+        "published": "1",
+        "is_processed": "0"
+    }]

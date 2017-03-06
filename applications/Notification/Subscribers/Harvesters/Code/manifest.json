@@ -1,0 +1,13 @@
+{
+    "name": "harvesters",
+    "title": "Subscribers Harvesters",
+    "explanation": "Subscribers Harvesters",
+    "description": "Subscribers Harvesters",
+    "version": 14,
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "date_file_modified": "2016-05-07 02:22:09"
+}

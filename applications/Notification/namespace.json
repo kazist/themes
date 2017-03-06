@@ -1,0 +1,82 @@
+{
+    "NotificationActivities": {
+        "namespace": "Notification\\Activities",
+        "controller": "ActivitiesController"
+    },
+    "NotificationComments": {
+        "namespace": "Notification\\Comments",
+        "controller": "CommentsController"
+    },
+    "NotificationEmails": {
+        "namespace": "Notification\\Emails",
+        "controller": "EmailsController"
+    },
+    "NotificationTemplates": {
+        "namespace": "Notification\\Templates",
+        "controller": "TemplatesController"
+    },
+    "NotificationTemplatesLayouts": {
+        "namespace": "Notification\\Templates\\Layouts",
+        "controller": "LayoutsController"
+    },
+    "NotificationGateways": {
+        "namespace": "Notification\\Gateways",
+        "controller": "GatewaysController"
+    },
+    "NotificationMessages": {
+        "namespace": "Notification\\Messages",
+        "controller": "MessagesController"
+    },
+    "NotificationNewsletters": {
+        "namespace": "Notification\\Newsletters",
+        "controller": "NewslettersController"
+    },
+    "NotificationNewslettersCategories": {
+        "namespace": "Notification\\Newsletters\\Categories",
+        "controller": "CategoriesController"
+    },
+    "NotificationNewslettersAutomated": {
+        "namespace": "Notification\\Newsletters\\Automated",
+        "controller": "AutomatedController"
+    },
+    "NotificationNewslettersAutomatedGroups": {
+        "namespace": "Notification\\Newsletters\\Automated\\Groups",
+        "controller": "GroupsController"
+    },
+    "NotificationNewslettersFrequencies": {
+        "namespace": "Notification\\Newsletters\\Frequencies",
+        "controller": "FrequenciesController"
+    },
+    "NotificationNewslettersGroups": {
+        "namespace": "Notification\\Newsletters\\Groups",
+        "controller": "GroupsController"
+    },
+    "NotificationNewslettersScheduled": {
+        "namespace": "Notification\\Newsletters\\Scheduled",
+        "controller": "ScheduledController"
+    },
+    "NotificationSubscribers": {
+        "namespace": "Notification\\Subscribers",
+        "controller": "SubscribersController"
+    },
+    "NotificationSubscribersHarvesters": {
+        "namespace": "Notification\\Subscribers\\Harvesters",
+        "controller": "HarvestersController"
+    },
+    "NotificationSubscribersBlacklist": {
+        "namespace": "Notification\\Subscribers\\Blacklist",
+        "controller": "BlacklistController"
+    },
+    "NotificationSubscribersWhitelist": {
+        "namespace": "Notification\\Subscribers\\Whitelist",
+        "controller": "WhitelistController"
+    },
+    "NotificationGroups": {
+        "namespace": "Notification\\Groups",
+        "controller": "GroupsController"
+    },
+    "NotificationGroupsSubscribers": {
+        "namespace": "Notification\\Groups\\Subscribers",
+        "controller": "SubscribersController"
+    }
+}

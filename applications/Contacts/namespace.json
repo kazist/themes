@@ -1,0 +1,14 @@
+{
+    "ContactsContacts": {
+        "namespace": "Contacts\\Contacts",
+        "controller": "ContactsController"
+    },
+    "ContactsCategories": {
+        "namespace": "Contacts\\Categories",
+        "controller": "CategoriesController"
+    },
+    "ContactsMessages": {
+        "namespace": "Contacts\\Messages",
+        "controller": "MessagesController"
+    }
+}

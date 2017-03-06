@@ -1,0 +1,9 @@
+{
+    "name": "search",
+    "title": "Search Indexing",
+    "icon": "icons\/search.png",
+    "extension": "component",
+    "path": "search\/",
+    "description": "Search Indexing",
+    "version": 1
+}

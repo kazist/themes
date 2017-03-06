@@ -1,0 +1,69 @@
+{
+    "title": "Notification",
+    "description": "Notification Advertisement",
+    "alias": "notification",
+    "icon": "fa-picture-o",
+    "home_link": "notification\/newsletters",
+    "is_core": "1",
+    "menulist": [{
+            "title": "Activities",
+            "alias": "admin_notification_activities",
+            "url": "admin/notification/activities",
+            "children": []
+        }, {
+            "title": "Queued Emails",
+            "alias": "admin_notification_emails",
+            "url": "admin/notification/emails",
+            "children": []
+        }, {
+            "title": "Gateways",
+            "alias": "admin_notification_gateways",
+            "url": "admin/notification/gateways",
+            "children": []
+        }, {
+            "title": "Messages",
+            "alias": "admin_notification_messages",
+            "url": "admin/notification/messages",
+            "children": []
+        }, {
+            "title": "Newsletters",
+            "alias": "admin_notification_newsletters",
+            "url": "admin/notification/newsletters",
+            "children": [{
+                    "title": "Categories ",
+                    "alias": "admin_notification_newsletters_categories",
+                    "url": "admin/notification/newsletters/categories",
+                    "children": []
+                }, {
+                    "title": "Frequencies ",
+                    "alias": "admin_notification_newsletters_frequencies",
+                    "url": "admin/notification/newsletters/frequencies",
+                    "children": []
+                }, {
+                    "title": "Automated Emails",
+                    "alias": "admin_notification_newsletters_automated",
+                    "url": "admin/notification/newsletters/automated",
+                    "children": []
+                }, {
+                    "title": "Scheduled Emails",
+                    "alias": "admin_notification_newsletters_scheduled",
+                    "url": "admin/notification/newsletters/scheduled",
+                    "children": []
+                }]
+        }, {
+            "title": "Subscribers",
+            "alias": "admin_notification_subscribers",
+            "url": "admin/notification/subscribers",
+            "children": []
+        }, {
+            "title": "Templates",
+            "alias": "admin_notification_templates",
+            "url": "admin/notification/templates",
+            "children": []
+        }, {
+            "title": "User Emails",
+            "alias": "admin_notification_templates_layouts",
+            "url": "admin/notification/templates/layouts",
+            "children": []
+        }]
+}

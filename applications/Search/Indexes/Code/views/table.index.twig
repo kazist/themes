@@ -1,0 +1,124 @@
+{# empty Twig template #}
+{% import "form.macro.twig" as forms %}
+
+{{ set_assets('applications/Search/assets/css/search.css') }}
+
+{% set search_for_arr =
+    {
+        0:{'numeric':'all_words','text':'All Words'},
+        1:{'numeric':'any_word','text':'Any Word'}
+    }
+%}
+
+{% set search_ordering_arr =
+    {
+        0:{'numeric':'newest_first','text':'Newest First'},
+        1:{'numeric':'older_first','text':'Older First'}
+    }
+%}
+
+{% set filters = callFunction( "Search.Subsets.Code.Models.SubsetsModel", 'getSubsetTables', filters ) %}
+{% set search_phrase = callFunction( "Search.Indexes.Code.Models.IndexesModel", 'getSearchPhrase', filters ) %}
+
+
+<h1 class="component-header">Advanced Search</h1>
+
+<form id="main-edit-form" action="{{ generate_url('search.indexes') }}" class="form-horizontal" method="post" role="form" enctype="multipart/form-data">
+    <div class="search-keyword">
+        <b>Search Keyword:</b><br>
+        <div class="input-group">
+            <div class="input-group-btn search-panel">
+                {% if filters|length > 0 %}
+                    <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
+                     
+                        {% if search_filter != '' and search_filter != 'all' %}
+                            {% for filter in filters %}
+                                {% if search_filter == filter.alias %}
+                                    <span id="search_concept">{{ filter.title }}</span> 
+                                    <span class="caret"></span>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <span id="search_concept">Filter by</span> <span class="caret"></span>
+                        {% endif %}
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for filter in filters %}
+                            <li>
+                                <a href="#{{ filter.alias }}" title="{{ filter.title }}">
+                                    {{ filter.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        <li class="divider"></li>
+                        <li><a href="#all" title="Anything">Anything</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+            <input type="hidden" name="search_filter" value="{{ search_filter|default('all') }}" id="search_filter">         
+            <input type="text" class="form-control" name="search_phrase" value="{{ search_phrase }}" placeholder="Search term...">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
+            </span>
+        </div>
+    </div>
+
+    {{ forms.input('_token' ) }} 
+
+</form>
+<br>
+
+<div class="advance-search">
+    <div class="col-sm-6">
+        {{ forms.input('search_for', 'radio', search_for, 'Criteria', null, null, null, null, search_for_arr) }}
+    </div>
+    <div class="col-sm-6">
+        {{ forms.input('search_ordering', 'select', search_ordering, 'Ordering', null, null, null, null, search_ordering_arr) }}
+    </div>
+</div>   
+<div class="clearfix"></div>
+<br>
+
+<div class="search-result-list">
+    {% if  items|length > 0 %}
+        {% for item in items %}
+            {% set item_url = generate_url('search.indexes.detail', {'id':item.id}) %}
+
+            <div class="search-result">
+
+                {% if item.media.file != '' %}
+                    <a href="{{ item_url }}" title="{{ item.title }}">
+                        <img src="{{ resized_image(item.media.file, 90,90) }}" alt="{{ item.media.title }}" title="{{ item.title }}" align="left" width="60px">
+                    </a>
+                {% endif %}
+
+                <a href="{{ item_url }}" title="{{ item.title }}">
+                    <b>
+                        {{ item.title }}
+                    </b>
+                </a>
+
+                <div>
+                    {{ item.description|truncate(120) }}
+                </div>
+
+
+                <div class="business-posted-date">
+                    <i class="fa fa-clock-o"></i> Posted:  {{ item.date_created|date('d M Y H:i') }} &nbsp;&nbsp;
+                    <i class="fa fa-arrow-circle-o-right"></i> In: {{item.subset_id_title }} 
+                </div>
+
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="search-result no-result">
+            No Search Result.
+        </div>
+    {% endif %}
+
+
+</div>
+<div class="clearfix"></div>
+
+{% include "items.pagination.twig"%}

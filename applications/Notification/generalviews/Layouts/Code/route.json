@@ -1,0 +1,87 @@
+{
+
+    "backend": [{
+            "title": "Layout List",
+            "description": "Management of Layouts.",
+            "controller": "Notification\\Templates\\Layouts\\Code\\Controllers\\Admin\\LayoutsController::indexAction",
+            "unique_name": "admin.notification.templates.layouts",
+            "route": "admin/notification/templates/layouts",
+            "arguments": "",
+            "keywords": "layout, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Edit Layout {{ item.name }}",
+            "description": "Edit Layout {{ item.name }}.",
+            "controller": "Notification\\Templates\\Layouts\\Code\\Controllers\\Admin\\LayoutsController::editAction",
+            "unique_name": "admin.notification.templates.layouts.edit",
+            "route": "admin/notification/templates/layouts/edit/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "layout, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Layout Detail: {{ item.name }}",
+            "description": "Layout Detail: {{ item.name }}",
+            "controller": "Notification\\Templates\\Layouts\\Code\\Controllers\\Admin\\LayoutsController::detailAction",
+            "unique_name": "admin.notification.templates.layouts.detail",
+            "route": "admin/notification/templates/layouts/detail/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "layout, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Layout Delete: {{ item.name }}",
+            "description": "Layout Delete: {{ item.name }}",
+            "controller": "Notification\\Templates\\Layouts\\Code\\Controllers\\Admin\\LayoutsController::deleteAction",
+            "unique_name": "admin.notification.templates.layouts.delete",
+            "route": "admin/notification/templates/layouts/delete/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "layout, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Layout Save: {{ item.name }}",
+            "description": "Layout Save: {{ item.name }}",
+            "controller": "Notification\\Templates\\Layouts\\Code\\Controllers\\Admin\\LayoutsController::saveAction",
+            "unique_name": "admin.notification.templates.layouts.save",
+            "route": "admin/notification/templates/layouts/save",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "layout, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

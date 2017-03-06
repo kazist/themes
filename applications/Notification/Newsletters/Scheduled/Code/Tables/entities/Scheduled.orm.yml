@@ -1,0 +1,107 @@
+Notification\Newsletters\Scheduled\Code\Tables\Scheduled:
+  table: notification_newsletters_scheduled
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    subset_id:
+      name: subset_id
+      type: integer
+      length: 11
+      nullable: true
+    unique_name:
+      name: unique_name
+      type: string
+      length: 255
+      nullable: true
+    subject:
+      name: subject
+      type: string
+      length: 255
+      nullable: false
+    body:
+      name: body
+      type: string
+      length: 255
+      nullable: false
+    user_field:
+      name: user_field
+      type: string
+      length: 255
+      nullable: true
+    date_field:
+      name: date_field
+      type: string
+      length: 255
+      nullable: true
+    email_field:
+      name: email_field
+      type: string
+      length: 255
+      nullable: true
+    wait_period:
+      name: wait_period
+      type: integer
+      length: 11
+      nullable: true
+    repeat_after:
+      name: repeat_after
+      type: integer
+      length: 11
+      nullable: true
+    repeat_stop:
+      name: repeat_stop
+      type: integer
+      length: 11
+      nullable: true
+    is_repeated:
+      name: is_repeated
+      type: integer
+      length: 11
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    extension_path:
+      name: extension_path
+      type: string
+      length: 255
+      nullable: true
+    scheduled_newsletter_date:
+      name: scheduled_newsletter_date
+      type: date
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  indexes:
+    subset_id_index:
+      columns: [subset_id]
+    extension_path_index:
+      columns: [extension_path]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

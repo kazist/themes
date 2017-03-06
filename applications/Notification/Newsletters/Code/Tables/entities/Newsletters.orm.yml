@@ -1,0 +1,144 @@
+Notification\Newsletters\Code\Tables\Newsletters:
+  table: notification_newsletters
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    subject:
+      name: subject
+      type: string
+      length: 255
+      nullable: false
+    body:
+      name: body
+      type: text
+      nullable: false
+    template_id:
+      name: template_id
+      type: integer
+      length: 11
+      nullable: true
+    group_id:
+      name: group_id
+      type: integer
+      length: 11
+      nullable: true
+    how_to_repeat:
+      name: how_to_repeat
+      type: string
+      length: 255
+      nullable: true
+    send_date:
+      name: send_date
+      type: datetime
+      nullable: true
+    start_date:
+      name: start_date
+      type: datetime
+      nullable: true
+    end_date:
+      name: end_date
+      type: datetime
+      nullable: true
+    forever:
+      name: forever
+      type: integer
+      length: 11
+      nullable: true
+    repeated:
+      name: repeated
+      type: integer
+      length: 11
+      nullable: true
+    repeated_every:
+      name: repeated_every
+      type: integer
+      length: 11
+      nullable: true
+    repeated_on:
+      name: repeated_on
+      type: string
+      length: 255
+      nullable: true
+    repeated_minute:
+      name: repeated_minute
+      type: string
+      length: 255
+      nullable: true
+    repeated_hour:
+      name: repeated_hour
+      type: string
+      length: 255
+      nullable: true
+    repeated_day_of_month:
+      name: repeated_day_of_month
+      type: string
+      length: 255
+      nullable: true
+    repeated_month:
+      name: repeated_month
+      type: string
+      length: 255
+      nullable: true
+    repeated_day_of_week:
+      name: repeated_day_of_week
+      type: string
+      length: 255
+      nullable: true
+    repeated_year:
+      name: repeated_year
+      type: string
+      length: 255
+      nullable: true
+    duration:
+      name: duration
+      type: integer
+      length: 11
+      nullable: true
+    duration_type:
+      name: duration_type
+      type: string
+      length: 255
+      nullable: true
+    is_sent:
+      name: is_sent
+      type: integer
+      length: 11
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: false
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  indexes:
+    template_id_index:
+      columns: [template_id]
+    group_id_index:
+      columns: [group_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

@@ -1,0 +1,13 @@
+{
+    "name": "gateways",
+    "title": "Email Gateways List",
+    "explanation": "Email Gateways List",
+    "description": "Email Gateways List",
+    "version": 32,
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "date_file_modified": "2016-09-19 12:28:27"
+}

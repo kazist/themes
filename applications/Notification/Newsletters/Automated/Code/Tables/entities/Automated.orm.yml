@@ -1,0 +1,106 @@
+Notification\Newsletters\Automated\Code\Tables\Automated:
+  table: notification_newsletters_automated
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    subset_id:
+      name: subset_id
+      type: integer
+      length: 11
+      nullable: false
+    frequency_id:
+      name: frequency_id
+      type: integer
+      length: 11
+      nullable: false
+    unique_name:
+      name: unique_name
+      type: string
+      length: 255
+      nullable: false
+    table_name:
+      name: table_name
+      type: string
+      length: 255
+      nullable: false
+    email_limit:
+      name: email_limit
+      type: integer
+      length: 11
+      nullable: false
+    subject:
+      name: subject
+      type: string
+      length: 255
+      nullable: false
+    body:
+      name: body
+      type: text
+      nullable: true
+    send_date:
+      name: send_date
+      type: datetime
+      nullable: true
+    parameter_name:
+      name: parameter_name
+      type: string
+      length: 255
+      nullable: true
+    category_field:
+      name: category_field
+      type: string
+      length: 255
+      nullable: true
+    category_table:
+      name: category_table
+      type: string
+      length: 255
+      nullable: true
+    category_table_mainfield:
+      name: category_table_mainfield
+      type: string
+      length: 255
+      nullable: true
+    extension_path:
+      name: extension_path
+      type: string
+      length: 255
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  indexes:
+    subset_id_index:
+      columns: [subset_id]
+    frequency_id_index:
+      columns: [frequency_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

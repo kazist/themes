@@ -1,0 +1,10 @@
+{
+    "name": "newsletter",
+    "title": "Newsletter Listing",
+    "explanation": "Newsletter Listing",
+    "description": "Newsletter Listing",
+    "version": 1,
+    "icon": "assets\/notification\/addons\/newsletter\/icon.png",
+    "extension": "addon",
+    "path": "notification\/addons\/newsletter\/"
+}

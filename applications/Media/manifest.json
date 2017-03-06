@@ -1,0 +1,9 @@
+{
+    "name": "media",
+    "title": "Media Manager",
+    "icon": "icons\/media.png",
+    "extension": "component",
+    "path": "media\/",
+    "description": "Media Manager",
+    "version": 1
+}

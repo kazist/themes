@@ -1,0 +1,346 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-12",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "subscribergroups Detail",
+                                            "unique_name": "subscribergroups_detail",
+                                            "has_title": null,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "id",
+                                                "created_by",
+                                                "date_created",
+                                                "subscriber_id",
+                                                "group_id"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": [
+                "modified_by",
+                "date_modified"
+            ]
+        },
+        "table": {
+            "fields": [
+                "id",
+                "created_by",
+                "date_created"
+            ],
+            "has_label": [
+                "id",
+                "created_by",
+                "date_created"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [
+        ],
+        "group": [
+        ],
+        "field": [
+        ]
+    },
+    "customhtmls": [
+    ],
+    "fields": [
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "subscriber_id",
+            "html_type": "autocomplete",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "title"
+                    ],
+                    "join_table_name": "notification_subscribers"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "group_id",
+            "html_type": "select",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "title"
+                    ],
+                    "join_table_name": "notification_subscribers_groups"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "autocomplete",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "name"
+                    ],
+                    "join_table_name": "users_users"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "autocomplete",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "name"
+                    ],
+                    "join_table_name": "users_users"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "notification_subscribers_groups_subscribers",
+    "table_alias": "nsgs",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "id"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "subscribers",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Notification\\Subscribers\\Groups\\Subscribers\\Code\\Tables\\Subscribers",
+            "alias": "nsgs",
+            "name": "#__notification_subscribers_groups_subscribers"
+        },
+        "select": [
+            "nsgs.id",
+            "nsgs.subscriber_id",
+            "ns.title AS subscriber_id_title",
+            "nsgs.group_id",
+            "nsg.title AS group_id_title",
+            "nsgs.created_by",
+            "uu.name AS created_by_name",
+            "nsgs.date_created",
+            "nsgs.modified_by",
+            "uu_6465.name AS modified_by_name",
+            "nsgs.date_modified"
+        ],
+        "leftjoin": [
+            {
+                "table": "Notification\\Subscribers\\Code\\Tables\\Subscribers",
+                "alias": "ns",
+                "name": "#__notification_subscribers",
+                "on": "nsgs.subscriber_id = ns.id"
+            },
+            {
+                "table": "Notification\\Subscribers\\Groups\\Code\\Tables\\Groups",
+                "alias": "nsg",
+                "name": "#__notification_subscribers_groups",
+                "on": "nsgs.group_id = nsg.id"
+            },
+            {
+                "table": "Users\\Users\\Code\\Tables\\Users",
+                "alias": "uu",
+                "name": "#__users_users",
+                "on": "nsgs.created_by = uu.id"
+            },
+            {
+                "table": "Users\\Users\\Code\\Tables\\Users",
+                "alias": "uu_6465",
+                "name": "#__users_users",
+                "on": "nsgs.modified_by = uu_6465.id"
+            }
+        ]
+    }
+}

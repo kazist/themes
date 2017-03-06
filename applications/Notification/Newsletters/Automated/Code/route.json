@@ -1,0 +1,136 @@
+{
+    "frontend": [{
+            "title": "Cron Scheduled Automated",
+            "description": "Cron Scheduled.",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\AutomatedController::cronautonewsletterAction",
+            "unique_name": "notification.newsletters.automated.cronautonewsletter",
+            "route": "notification/newsletters/automated/cronautonewsletter",
+            "permissions": "can_view, can_viewown",
+            "arguments": "",
+            "keywords": "cronautonewsletter, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }],
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::taskAction",
+            "unique_name": "admin.notification.newsletters.automated.task",
+            "route": "admin/notification/newsletters/automated/task",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": "",
+            "keywords": "automated, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Automated List",
+            "description": "Management of Automated.",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.notification.newsletters.automated",
+            "route": "admin/notification/newsletters/automated",
+            "arguments": "",
+            "keywords": "automated, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Automated ",
+            "description": "Add Automated .",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::addAction",
+            "unique_name": "admin.notification.newsletters.automated.add",
+            "route": "admin/notification/newsletters/automated/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "automated, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Automated {{ item.name }}",
+            "description": "Edit Automated {{ item.name }}.",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::editAction",
+            "unique_name": "admin.notification.newsletters.automated.edit",
+            "route": "admin/notification/newsletters/automated/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "automated, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Automated Detail: {{ item.name }}",
+            "description": "Automated Detail: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::detailAction",
+            "unique_name": "admin.notification.newsletters.automated.detail",
+            "route": "admin/notification/newsletters/automated/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "automated, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Automated Delete: {{ item.name }}",
+            "description": "Automated Delete: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::deleteAction",
+            "unique_name": "admin.notification.newsletters.automated.delete",
+            "route": "admin/notification/newsletters/automated/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "automated, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Automated Save: {{ item.name }}",
+            "description": "Automated Save: {{ item.name }}",
+            "controller": "Notification\\Newsletters\\Automated\\Code\\Controllers\\Admin\\AutomatedController::saveAction",
+            "unique_name": "admin.notification.newsletters.automated.save",
+            "route": "admin/notification/newsletters/automated/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "automated, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

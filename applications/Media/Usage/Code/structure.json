@@ -1,0 +1,369 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "usage Detail",
+                                            "unique_name": "usage_detail",
+                                            "has_title": null,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "record_id",
+                                                "subset_id",
+                                                "media_id"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "Modification Detail",
+                                            "unique_name": "modification_detail",
+                                            "has_title": null,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "date_created",
+                                                "created_by",
+                                                "date_modified",
+                                                "modified_by"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": [
+                "id",
+                "field_name"
+            ]
+        },
+        "table": {
+            "fields": [
+                "record_id",
+                "media_id",
+                "subset_id"
+            ],
+            "has_label": [
+                "record_id",
+                "media_id",
+                "subset_id"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [
+        ],
+        "group": [
+        ],
+        "field": [
+        ]
+    },
+    "customhtmls": [
+    ],
+    "fields": [
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "record_id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "media_id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subset_id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "field_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+                ],
+                "source": [
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+                ],
+                "payment": [
+                ]
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "media_usage",
+    "table_alias": "mu",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "id"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "usage",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Media\\Usage\\Code\\Tables\\Usage",
+            "alias": "mu",
+            "name": "#__media_usage"
+        },
+        "select": [
+            "mu.id",
+            "mu.record_id",
+            "mu.media_id",
+            "mu.subset_id",
+            "mu.field_name",
+            "mu.created_by",
+            "mu.date_created",
+            "mu.modified_by",
+            "mu.date_modified"
+        ]
+    }
+}

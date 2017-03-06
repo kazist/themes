@@ -1,0 +1,17 @@
+
+[{
+        "tracking_id": "1",
+        "controller": "Notification\\Emails\\Code\\Controllers\\EmailsController",
+        "function": "cronemailsenderAction",
+        "unique_name": "notification.emails.cronemailsender",
+        "minute": "0",
+        "hour": "*",
+        "day_of_month": "*",
+        "month": "*",
+        "day_of_week": "*",
+        "year": "*",
+        "next_run_time": "",
+        "published": 1
+    }]
+
+

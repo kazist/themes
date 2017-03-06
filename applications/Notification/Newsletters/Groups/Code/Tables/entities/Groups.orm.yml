@@ -1,0 +1,53 @@
+Notification\Newsletters\Groups\Code\Tables\Groups:
+  table: notification_newsletters_groups
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    group_id:
+      name: group_id
+      type: integer
+      length: 11
+      nullable: false
+    newsletter_id:
+      name: newsletter_id
+      type: integer
+      length: 11
+      nullable: false
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  indexes:
+    group_id_index:
+      columns: [group_id]
+    newsletter_id_index:
+      columns: [newsletter_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

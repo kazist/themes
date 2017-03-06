@@ -1,0 +1,53 @@
+Media\Usage\Code\Tables\Usage:
+  table: media_usage
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    record_id:
+      name: record_id
+      type: integer
+      length: 11
+      nullable: true
+    media_id:
+      name: media_id
+      type: integer
+      length: 11
+      nullable: false
+    subset_id:
+      name: subset_id
+      type: integer
+      length: 11
+      nullable: false
+    field_name:
+      name: field_name
+      type: string
+      length: 255
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

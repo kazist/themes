@@ -1,0 +1,49 @@
+{# empty Twig template #}
+
+<script>
+
+    jQuery(document).ready(function () {
+        jQuery('#extension_path').change(function () {
+            extension_path = jQuery(this).val();
+            updateFields(extension_path);
+        });
+
+        extension_path = jQuery('#extension_path').val();
+        updateFields(extension_path);
+
+    });
+
+    function updateFields(extension_path) {
+
+        var data_object = {"extension_path": extension_path};
+
+        table_fields = kazist.callAjaxByRoute('notification.newsletters.scheduled.tablefieldinput', data_object, true);
+
+        updateFieldOptions('user_field', table_fields);
+        updateFieldOptions('date_field', table_fields);
+        updateFieldOptions('email_field', table_fields);
+    }
+
+    function updateFieldOptions(field_name, fields) {
+
+        var str_html = "";
+        var field_name = '#' + field_name;
+        var default_val = jQuery(field_name).val();
+
+        str_html += '<option value="">None</option > ';
+
+        jQuery.each(fields, function (index, value) {
+
+            var selected = '';
+
+            if (default_val === value) {
+                selected = 'selected="selected"';
+            }
+
+            str_html += '<option value="' + value + '" ' + selected + '>' + value + '</option > ';
+        });
+
+        jQuery(field_name).html(str_html);
+    }
+
+</script>

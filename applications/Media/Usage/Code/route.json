@@ -1,0 +1,123 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::taskAction",
+            "unique_name": "admin.media.usage.task",
+            "route": "admin/media/usage/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "usage, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Usage List",
+            "description": "Management of Usage.",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.media.usage",
+            "route": "admin/media/usage",
+            "arguments": "",
+            "keywords": "usage, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Usage  ",
+            "description": "Add Usage .",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::addAction",
+            "unique_name": "admin.media.usage.add",
+            "route": "admin/media/usage/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "usage, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Usage {{ item.name }}",
+            "description": "Edit Usage {{ item.name }}.",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::editAction",
+            "unique_name": "admin.media.usage.edit",
+            "route": "admin/media/usage/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "usage, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Usage Detail: {{ item.name }}",
+            "description": "Usage Detail: {{ item.name }}",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::detailAction",
+            "unique_name": "admin.media.usage.detail",
+            "route": "admin/media/usage/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "usage, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Usage Delete: {{ item.name }}",
+            "description": "Usage Delete: {{ item.name }}",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::deleteAction",
+            "unique_name": "admin.media.usage.delete",
+            "route": "admin/media/usage/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "usage, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Usage Save: {{ item.name }}",
+            "description": "Usage Save: {{ item.name }}",
+            "controller": "Media\\Usage\\Code\\Controllers\\Admin\\UsageController::saveAction",
+            "unique_name": "admin.media.usage.save",
+            "route": "admin/media/usage/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "usage, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

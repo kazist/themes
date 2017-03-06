@@ -1,0 +1,87 @@
+{
+
+    "backend": [{
+            "title": "Template List",
+            "description": "Management of Templates.",
+            "controller": "Notification\\Templates\\Code\\Controllers\\Admin\\TemplatesController::indexAction",
+            "unique_name": "admin.notification.templates",
+            "route": "admin/notification/templates",
+            "arguments": "",
+            "keywords": "template, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Edit Template {{ item.name }}",
+            "description": "Edit Template {{ item.name }}.",
+            "controller": "Notification\\Templates\\Code\\Controllers\\Admin\\TemplatesController::editAction",
+            "unique_name": "admin.notification.templates.edit",
+            "route": "admin/notification/templates/edit/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "template, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Template Detail: {{ item.name }}",
+            "description": "Template Detail: {{ item.name }}",
+            "controller": "Notification\\Templates\\Code\\Controllers\\Admin\\TemplatesController::detailAction",
+            "unique_name": "admin.notification.templates.detail",
+            "route": "admin/notification/templates/detail/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "template, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Template Delete: {{ item.name }}",
+            "description": "Template Delete: {{ item.name }}",
+            "controller": "Notification\\Templates\\Code\\Controllers\\Admin\\TemplatesController::deleteAction",
+            "unique_name": "admin.notification.templates.delete",
+            "route": "admin/notification/templates/delete/{id}",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "template, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Template Save: {{ item.name }}",
+            "description": "Template Save: {{ item.name }}",
+            "controller": "Notification\\Templates\\Code\\Controllers\\Admin\\TemplatesController::saveAction",
+            "unique_name": "admin.notification.templates.save",
+            "route": "admin/notification/templates/save",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "template, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

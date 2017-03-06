@@ -1,0 +1,163 @@
+{
+    "frontend": [{
+            "title": "Index List",
+            "description": "Management of Indexes.",
+            "controller": "Search\\Indexes\\Code\\Controllers\\IndexesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "search.indexes",
+            "route": "search/indexes",
+            "arguments": "",
+            "keywords": "index, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }, {
+            "title": "Index Detail: {{ item.name }}",
+            "description": "Index Detail: {{ item.name }}",
+            "controller": "Search\\Indexes\\Code\\Controllers\\IndexesController::detailAction",
+            "unique_name": "search.indexes.detail",
+            "route": "search/indexes/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "index, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }, {
+            "title": "Content Indexing",
+            "description": "Content Indexing",
+            "controller": "Search\\Indexes\\Code\\Controllers\\IndexesController::contentindexingAction",
+            "unique_name": "search.indexes.contentindexing",
+            "route": "search/indexes/contentindexing",
+            "permissions": "can_view, can_viewown",
+            "arguments": [],
+            "keywords": "index, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0
+        }]
+    ,
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::taskAction",
+            "unique_name": "admin.search.indexes.task",
+            "route": "admin/search/indexes/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "indexes, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Index List",
+            "description": "Management of Indexes.",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.search.indexes",
+            "route": "admin/search/indexes",
+            "arguments": "",
+            "keywords": "index, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Index ",
+            "description": "Edit Index  ",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::addAction",
+            "unique_name": "admin.search.indexes.add",
+            "route": "admin/search/indexes/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "index, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Index {{ item.name }}",
+            "description": "Edit Index {{ item.name }}.",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::editAction",
+            "unique_name": "admin.search.indexes.edit",
+            "route": "admin/search/indexes/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "index, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Index Detail: {{ item.name }}",
+            "description": "Index Detail: {{ item.name }}",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::detailAction",
+            "unique_name": "admin.search.indexes.detail",
+            "route": "admin/search/indexes/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "index, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Index Delete: {{ item.name }}",
+            "description": "Index Delete: {{ item.name }}",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::deleteAction",
+            "unique_name": "admin.search.indexes.delete",
+            "route": "admin/search/indexes/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "index, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Index Save: {{ item.name }}",
+            "description": "Index Save: {{ item.name }}",
+            "controller": "Search\\Indexes\\Code\\Controllers\\Admin\\IndexesController::saveAction",
+            "unique_name": "admin.search.indexes.save",
+            "route": "admin/search/indexes/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "index, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

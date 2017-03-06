@@ -1,0 +1,9 @@
+{
+    "name": "contacts",
+    "title": "Contacts",
+    "icon": "assets\/contacts\/contacts\/icon.png",
+    "extension": "component",
+    "path": "contacts\/",
+     "is_core": "1",
+    "description": "Contacts"
+}

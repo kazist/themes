@@ -1,0 +1,70 @@
+Contacts\Messages\Code\Tables\Messages:
+  table: contacts_messages
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    subject:
+      name: subject
+      type: string
+      length: 255
+      nullable: false
+    message:
+      name: message
+      type: text
+      nullable: false
+    name:
+      name: name
+      type: string
+      length: 255
+      nullable: true
+    email:
+      name: email
+      type: string
+      length: 255
+      nullable: false
+    phone:
+      name: phone
+      type: string
+      length: 255
+      nullable: true
+    send_copy:
+      name: send_copy
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+    category_id:
+      name: category_id
+      type: integer
+      length: 11
+      nullable: false
+  indexes:
+    category_id_index:
+      columns: [category_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

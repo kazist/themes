@@ -1,0 +1,116 @@
+Notification\Newsletters\Frequencies\Code\Tables\Frequencies:
+  table: notification_newsletters_frequencies
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    alias:
+      name: alias
+      type: string
+      length: 255
+      nullable: false
+    how_to_repeat:
+      name: how_to_repeat
+      type: string
+      length: 255
+      nullable: true
+    start_date:
+      name: start_date
+      type: datetime
+      nullable: true
+    end_date:
+      name: end_date
+      type: datetime
+      nullable: true
+    forever:
+      name: forever
+      type: integer
+      length: 11
+      nullable: true
+    repeated:
+      name: repeated
+      type: integer
+      length: 11
+      nullable: true
+    repeated_every:
+      name: repeated_every
+      type: integer
+      length: 11
+      nullable: true
+    repeated_on:
+      name: repeated_on
+      type: string
+      length: 255
+      nullable: true
+    repeated_minute:
+      name: repeated_minute
+      type: string
+      length: 255
+      nullable: true
+    repeated_hour:
+      name: repeated_hour
+      type: string
+      length: 255
+      nullable: true
+    repeated_day_of_month:
+      name: repeated_day_of_month
+      type: string
+      length: 255
+      nullable: true
+    repeated_month:
+      name: repeated_month
+      type: string
+      length: 255
+      nullable: true
+    repeated_day_of_week:
+      name: repeated_day_of_week
+      type: string
+      length: 255
+      nullable: true
+    repeated_year:
+      name: repeated_year
+      type: string
+      length: 255
+      nullable: true
+    duration:
+      name: duration
+      type: integer
+      length: 11
+      nullable: true
+    duration_type:
+      name: duration_type
+      type: string
+      length: 255
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

@@ -1,0 +1,128 @@
+Notification\Gateways\Code\Tables\Gateways:
+  table: notification_gateways
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    type:
+      name: type
+      type: string
+      length: 255
+      nullable: false
+    smtp_auth:
+      name: smtp_auth
+      type: integer
+      length: 11
+      nullable: true
+    smtp_secure:
+      name: smtp_secure
+      type: string
+      length: 255
+      nullable: true
+    smtp_host:
+      name: smtp_host
+      type: string
+      length: 255
+      nullable: true
+    smtp_username:
+      name: smtp_username
+      type: string
+      length: 255
+      nullable: true
+    smtp_password:
+      name: smtp_password
+      type: string
+      length: 255
+      nullable: true
+    smtp_port:
+      name: smtp_port
+      type: string
+      length: 255
+      nullable: true
+    from_email:
+      name: from_email
+      type: string
+      length: 255
+      nullable: true
+    from_name:
+      name: from_name
+      type: string
+      length: 255
+      nullable: true
+    auto_reply_to:
+      name: auto_reply_to
+      type: string
+      length: 255
+      nullable: true
+    mail_debuger:
+      name: mail_debuger
+      type: integer
+      length: 11
+      nullable: true
+    debug_exit:
+      name: debug_exit
+      type: integer
+      length: 11
+      nullable: true
+    use_template:
+      name: use_template
+      type: integer
+      length: 11
+      nullable: true
+    sql_limit:
+      name: sql_limit
+      type: integer
+      length: 11
+      nullable: true
+    anti_flood:
+      name: anti_flood
+      type: integer
+      length: 11
+      nullable: true
+    throttler:
+      name: throttler
+      type: integer
+      length: 11
+      nullable: false
+    is_html:
+      name: is_html
+      type: integer
+      length: 11
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

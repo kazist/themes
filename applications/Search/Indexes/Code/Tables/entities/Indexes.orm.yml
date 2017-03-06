@@ -1,0 +1,88 @@
+Search\Indexes\Code\Tables\Indexes:
+  table: search_indexes
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: false
+    description:
+      name: description
+      type: string
+      length: 255
+      nullable: true
+    subset_id:
+      name: subset_id
+      type: integer
+      length: 11
+      nullable: false
+    record_id:
+      name: record_id
+      type: integer
+      length: 11
+      nullable: false
+    image:
+      name: image
+      type: integer
+      length: 11
+      nullable: true
+    date_index:
+      name: date_index
+      type: date
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    publish_up:
+      name: publish_up
+      type: date
+      nullable: true
+    publish_down:
+      name: publish_down
+      type: date
+      nullable: true
+    sale_price:
+      name: sale_price
+      type: integer
+      length: 11
+      nullable: true
+    discounted_price:
+      name: discounted_price
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+  indexes:
+    subset_id_index:
+      columns: [subset_id]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

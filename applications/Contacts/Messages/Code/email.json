@@ -1,0 +1,9 @@
+{
+    "layout": [{
+            "tracking_id": "1",
+            "unique_name": "contacts.messages.added",
+            "subject": "New Message Added [{{ ticket.title }}].",
+            "sms": "New Message Added [{{ ticket.title }}].",
+            "body": "New Message"
+        }]
+}

@@ -1,0 +1,13 @@
+{
+    "name": "contacts",
+    "title": "Contacts List",
+    "explanation": "Contacts List",
+    "description": "Contacts List",
+    "version": 9,
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "date_file_modified": "2017-01-12 10:34:15"
+}

@@ -1,0 +1,426 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-12",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "Email Detail",
+                                            "unique_name": "email_detail",
+                                            "has_title": 1,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "unique_name",
+                                                "subject",
+                                                "body",
+                                                "published"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": [
+                "id",
+                "ordering",
+                "created_by",
+                "date_created",
+                "modified_by",
+                "date_modified"
+            ]
+        },
+        "table": {
+            "fields": [
+                "unique_name",
+                "subject",
+                "published"
+            ],
+            "has_label": [
+                "unique_name",
+                "subject",
+                "published"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [
+
+        ],
+        "group": [
+
+        ],
+        "field": [
+
+        ]
+    },
+    "customhtmls": [
+
+    ],
+    "fields": [
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "unique_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subject",
+            "html_type": "text",
+            "mysql_type": "text",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "body",
+            "html_type": "editor",
+            "mysql_type": "text",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": {
+                    "col": "",
+                    "row": ""
+                },
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "ordering",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "published",
+            "html_type": "yesno",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [
+
+                ],
+                "source": [
+
+                ],
+                "save": {
+                    "index": ""
+                },
+                "media": [
+
+                ],
+                "payment": [
+
+                ]
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "notification_templates_layouts",
+    "table_alias": "ntl",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "id"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "layouts",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Notification\\Templates\\Layouts\\Code\\Tables\\Layouts",
+            "alias": "ntl"
+        },
+        "select": [
+            "ntl.id",
+            "ntl.unique_name",
+            "ntl.subject",
+            "ntl.body",
+            "ntl.ordering",
+            "ntl.published",
+            "ntl.created_by",
+            "ntl.date_created",
+            "ntl.modified_by",
+            "ntl.date_modified"
+        ]
+    }
+}

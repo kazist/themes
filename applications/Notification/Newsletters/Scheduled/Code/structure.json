@@ -1,0 +1,664 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "scheduled Detail",
+                                            "unique_name": "scheduled_detail",
+                                            "has_title": 1,
+                                            "user_right": 0,
+                                            "hide_on_new": 0,
+                                            "fields": [
+                                                "subject",
+                                                "body",
+                                                "scheduled_newsletter_date",
+                                                "published"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "Target Table",
+                                            "unique_name": "target_table",
+                                            "has_title": 1,
+                                            "user_right": 0,
+                                            "hide_on_new": 0,
+                                            "fields": [
+                                                "extension_path",
+                                                "user_field",
+                                                "date_field",
+                                                "email_field"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "group": {
+                                            "name": "How to Send",
+                                            "unique_name": "how_to_send",
+                                            "has_title": 1,
+                                            "user_right": 0,
+                                            "hide_on_new": 0,
+                                            "fields": [
+                                                "wait_period",
+                                                "repeat_after",
+                                                "repeat_stop"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "group": {
+                                            "name": "Modification Detail",
+                                            "unique_name": "modification_detail",
+                                            "has_title": 1,
+                                            "user_right": 1,
+                                            "hide_on_new": 1,
+                                            "fields": [
+                                                "date_modified",
+                                                "modified_by",
+                                                "date_created",
+                                                "created_by"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": [
+                "id",
+                "subset_id",
+                "unique_name",
+                "is_repeated"
+            ]
+        },
+        "table": {
+            "fields": [
+                "subject",
+                "wait_period",
+                "repeat_after",
+                "repeat_stop",
+                "published",
+                "extension_path"
+            ],
+            "has_label": [
+                "subject",
+                "wait_period",
+                "repeat_after",
+                "repeat_stop",
+                "published",
+                "extension_path"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [],
+        "group": [
+            "modification_detail"
+        ],
+        "field": []
+    },
+    "customhtmls": [],
+    "fields": [
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "subset_id",
+            "html_type": "select",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "title"
+                    ],
+                    "join_table_name": "system_subsets"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "unique_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subject",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "body",
+            "html_type": "editor",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": {
+                    "col": "",
+                    "row": ""
+                },
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "user_field",
+            "html_type": "select",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "created_by",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "customs": [],
+                    "data_source": "custom"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "date_field",
+            "html_type": "select",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "date_created",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "customs": [],
+                    "data_source": "custom"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "email_field",
+            "html_type": "select",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "customs": [],
+                    "data_source": "custom"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "wait_period",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "repeat_after",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "repeat_stop",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "is_repeated",
+            "html_type": "yesno",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "published",
+            "html_type": "yesno",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "extension_path",
+            "html_type": "select",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "path",
+                    "display_field": [
+                        "path"
+                    ],
+                    "join_table_name": "system_subsets"
+                },
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "scheduled_newsletter_date",
+            "html_type": "datetime",
+            "mysql_type": "date",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "20",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "notification_newsletters_scheduled",
+    "table_alias": "nns",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "subject"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "scheduled",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Notification\\Newsletters\\Scheduled\\Code\\Tables\\Scheduled",
+            "alias": "nns",
+            "name": "#__notification_newsletters_scheduled"
+        },
+        "select": [
+            "nns.id",
+            "nns.subset_id",
+            "ss.title AS subset_id_title",
+            "nns.unique_name",
+            "nns.subject",
+            "nns.body",
+            "nns.user_field",
+            "nns.date_field",
+            "nns.email_field",
+            "nns.wait_period",
+            "nns.repeat_after",
+            "nns.repeat_stop",
+            "nns.is_repeated",
+            "nns.published",
+            "nns.extension_path",
+            "ss_6700.path AS extension_path_path",
+            "nns.scheduled_newsletter_date",
+            "nns.created_by",
+            "nns.date_created",
+            "nns.modified_by",
+            "nns.date_modified"
+        ],
+        "leftjoin": [
+            {
+                "table": "System\\Subsets\\Code\\Tables\\Subsets",
+                "alias": "ss",
+                "name": "#__system_subsets",
+                "on": "nns.subset_id = ss.id"
+            },
+            {
+                "table": "System\\Subsets\\Code\\Tables\\Subsets",
+                "alias": "ss_6700",
+                "name": "#__system_subsets",
+                "on": "nns.extension_path = ss_6700.path"
+            }
+        ]
+    }
+}

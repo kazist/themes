@@ -1,0 +1,15 @@
+{# empty Twig template #}
+{# empty Twig template #}
+
+{% import "form.macro.twig" as forms %}
+
+{% set item = getContext('item')%}
+
+{% set stop_repeating = getContext('stop_repeating')%}
+
+<div class="form-group stop_repeating-group">
+    <label for="stop_repeating" class="col-sm-3 control-label">Stop Repeating</label>
+    <div class="col-sm-9 kazicode-form-field">
+        {{ forms.input('stop_repeating','select', item.stop_repeating, null, null, null, null, null, stop_repeating) }}
+    </div>
+</div>

@@ -1,0 +1,202 @@
+{
+    "frontend": [{
+            "title": "Contacts List",
+            "description": "Management of Contacts.",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\ContactsController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "contacts.contacts",
+            "route": "contacts/contacts",
+            "arguments": "",
+            "keywords": "contacts, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Contacts ",
+            "description": "Add Contacts .",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\ContactsController::addAction",
+            "unique_name": "contacts.contacts.add",
+            "route": "contacts/contacts/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "contacts, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"],
+                "MODERATOR": ["can_add"],
+                "USER": ["can_add"]
+            }
+        }, {
+            "title": "Contacts Detail: {{ item.name }}",
+            "description": "Contacts Detail: {{ item.name }}",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\ContactsController::detailAction",
+            "unique_name": "contacts.contacts.detail",
+            "route": "contacts/contacts/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "contacts, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Contact Save: {{ item.name }}",
+            "description": "Contact Save: {{ item.name }}",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\ContactsController::saveAction",
+            "unique_name": "contacts.contacts.save",
+            "route": "contacts/contacts/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "contact, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 0,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"],
+                "MODERATOR": ["can_add", "can_write", "can_writeown"],
+                "USER": ["can_add", "can_writeown"]
+            }
+        }],
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::taskAction",
+            "unique_name": "admin.contacts.contacts.task",
+            "route": "admin/contacts/contacts/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "contacts, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Contacts List",
+            "description": "Management of Contacts.",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.contacts.contacts",
+            "route": "admin/contacts/contacts",
+            "arguments": "",
+            "keywords": "category, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Contacts  ",
+            "description": "Add Contacts .",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::addAction",
+            "unique_name": "admin.contacts.contacts.add",
+            "route": "admin/contacts/contacts/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "category, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Contacts {{ item.name }}",
+            "description": "Edit Contacts {{ item.name }}.",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::editAction",
+            "unique_name": "admin.contacts.contacts.edit",
+            "route": "admin/contacts/contacts/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Contacts Detail: {{ item.name }}",
+            "description": "Contacts Detail: {{ item.name }}",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::detailAction",
+            "unique_name": "admin.contacts.contacts.detail",
+            "route": "admin/contacts/contacts/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Contacts Delete: {{ item.name }}",
+            "description": "Contacts Delete: {{ item.name }}",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::deleteAction",
+            "unique_name": "admin.contacts.contacts.delete",
+            "route": "admin/contacts/contacts/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Contacts Save: {{ item.name }}",
+            "description": "Contacts Save: {{ item.name }}",
+            "controller": "Contacts\\Contacts\\Code\\Controllers\\Admin\\ContactsController::saveAction",
+            "unique_name": "admin.contacts.contacts.save",
+            "route": "admin/contacts/contacts/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "category, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

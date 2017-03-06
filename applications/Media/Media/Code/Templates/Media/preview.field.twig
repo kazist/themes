@@ -1,0 +1,27 @@
+{% set domain_url = getContext('domain_url') %}
+{% set item = getContext('item') %}
+{% if item.show_iframe %}
+    <iframe src="{{ domain_url }}viewerjs/index.html#{{ domain_url }}{{ item.file }}" style="width: 100%; height: 500px;"></iframe>
+{% elseif item.show_image %}
+    <div class="text-center">
+        <img src="{{ domain_url }}{{ item.file }}" alt="{{ item.title }}" title="{{ item.title }}">
+    </div>
+{% elseif (not item.show_image) and (not item.show_image) %}
+    <div class="text-center">
+        <br>
+        <br>
+        {{ item.file }}
+        <br>
+        <br>
+        <a class="btn btn-success" href="{{ domain_url }}{{ item.file }}" target="_blank" title="Download {{ item.title }}">
+            <span class="glyphicon glyphicon-dashboard"></span>
+            Download {{ item.title }}
+        </a>
+        <br>
+        <br>
+        <br>
+    </div>
+{% endif %}
+
+
+

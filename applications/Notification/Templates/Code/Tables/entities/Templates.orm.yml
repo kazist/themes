@@ -1,0 +1,56 @@
+Notification\Templates\Code\Tables\Templates:
+  table: notification_templates
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      name: name
+      type: text
+      nullable: false
+    template:
+      name: template
+      type: text
+      nullable: false
+    ordering:
+      name: ordering
+      type: integer
+      length: 11
+      nullable: true
+    is_default:
+      name: is_default
+      type: integer
+      length: 11
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

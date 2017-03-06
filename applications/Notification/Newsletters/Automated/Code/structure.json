@@ -1,0 +1,752 @@
+{
+    "views": {
+        "edit": {
+            "structure": {
+                "rows": [
+                    {
+                        "columns": [
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "group": {
+                                            "name": "Automated Detail",
+                                            "unique_name": "automated_detail",
+                                            "has_title": 0,
+                                            "user_right": 0,
+                                            "hide_on_new": 0,
+                                            "fields": [
+                                                "subject",
+                                                "frequency_id",
+                                                "body",
+                                                "send_date",
+                                                "parameter_name",
+                                                "extension_path",
+                                                "unique_name",
+                                                "table_name",
+                                                "published"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "",
+                                "class_name": "col-sm-6",
+                                "items": [
+                                    {
+                                        "tab": [
+                                            {
+                                                "name": "Fields Detail",
+                                                "unique_name": "fields_detail",
+                                                "user_right": null,
+                                                "hide_on_new": null,
+                                                "tabcontent": {
+                                                    "columns": [
+                                                        {
+                                                            "name": "",
+                                                            "class_name": "col-sm-12",
+                                                            "items": [
+                                                                {
+                                                                    "group": {
+                                                                        "name": "Fields Detail",
+                                                                        "unique_name": "fields_detail",
+                                                                        "has_title": null,
+                                                                        "user_right": null,
+                                                                        "hide_on_new": null,
+                                                                        "fields": [
+                                                                            "category_field",
+                                                                            "category_table",
+                                                                            "category_table_mainfield"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "name": "System Detail",
+                                                "unique_name": "system_detail",
+                                                "user_right": null,
+                                                "hide_on_new": null,
+                                                "tabcontent": {
+                                                    "columns": [
+                                                        {
+                                                            "name": "",
+                                                            "class_name": "col-sm-12",
+                                                            "items": [
+                                                                {
+                                                                    "group": {
+                                                                        "name": "System Detail",
+                                                                        "unique_name": "system_detail",
+                                                                        "has_title": null,
+                                                                        "user_right": null,
+                                                                        "hide_on_new": null,
+                                                                        "fields": [
+                                                                            "subset_id"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "name": "Modification Detail",
+                                                "unique_name": "modification_detail",
+                                                "user_right": null,
+                                                "hide_on_new": null,
+                                                "tabcontent": {
+                                                    "columns": [
+                                                        {
+                                                            "name": "",
+                                                            "class_name": "col-sm-12",
+                                                            "items": [
+                                                                {
+                                                                    "group": {
+                                                                        "name": "Modification Detail",
+                                                                        "unique_name": "modification_detail",
+                                                                        "has_title": null,
+                                                                        "user_right": null,
+                                                                        "hide_on_new": null,
+                                                                        "fields": [
+                                                                            "date_created",
+                                                                            "created_by",
+                                                                            "date_modified",
+                                                                            "modified_by"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "group": {
+                                            "name": "Groups ",
+                                            "unique_name": "groups_",
+                                            "has_title": 1,
+                                            "user_right": null,
+                                            "hide_on_new": null,
+                                            "fields": [
+                                                "email_limit",
+                                                "groups"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "ommitted": [
+                "id"
+            ]
+        },
+        "table": {
+            "fields": [
+                "subset_id",
+                "frequency_id",
+                "subject",
+                "category_field",
+                "published"
+            ],
+            "has_label": [
+                "subset_id",
+                "frequency_id",
+                "subject",
+                "category_field"
+            ]
+        }
+    },
+    "rights": {
+        "tab": [],
+        "group": [],
+        "field": []
+    },
+    "customhtmls": [],
+    "fields": [
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "id",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subset_id",
+            "html_type": "select",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "title"
+                    ],
+                    "join_table_name": "system_subsets"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "frequency_id",
+            "html_type": "select",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "title"
+                    ],
+                    "join_table_name": "notification_newsletters_frequencies"
+                },
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "unique_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "table_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "email_limit",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "0",
+            "name": "subject",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "body",
+            "html_type": "editor",
+            "mysql_type": "text",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": {
+                    "col": "",
+                    "row": ""
+                },
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "send_date",
+            "html_type": "datetime",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "parameter_name",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "1",
+            "nullable": "1",
+            "name": "category_field",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "category_table",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "category_table_mainfield",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "extension_path",
+            "html_type": "text",
+            "mysql_type": "varchar",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "groups",
+            "html_type": "checkbox",
+            "mysql_type": "none",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": {
+                    "data_source": "db_table",
+                    "join_field": "id",
+                    "display_field": [
+                        "name"
+                    ],
+                    "join_table_name": "notification_groups"
+                },
+                "save": {
+                    "saving_type": "multiple",
+                    "table_creation": "custom",
+                    "save_table_name": "notification_newsletters_automated_groups",
+                    "save_field_name": "group_id",
+                    "foreign_field_name": "automated_id"
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "1",
+            "name": "published",
+            "html_type": "yesno",
+            "mysql_type": "int",
+            "view_side": "",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "1",
+            "size": "",
+            "readonly": "0",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "view_side": "both",
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "created_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_created",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "modified_by",
+            "html_type": "text",
+            "mysql_type": "int",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        },
+        {
+            "dropdown_filter": "0",
+            "nullable": "0",
+            "name": "date_modified",
+            "html_type": "text",
+            "mysql_type": "datetime",
+            "view_side": "both",
+            "index": "",
+            "id_name": "",
+            "class_name": "",
+            "default_value": "",
+            "size": "",
+            "readonly": "",
+            "format_value": "",
+            "parameters": {
+                "general": [],
+                "source": [],
+                "save": {
+                    "index": ""
+                },
+                "media": [],
+                "payment": []
+            }
+        }
+    ],
+    "primarykey": "id",
+    "table_name": "notification_newsletters_automated",
+    "table_alias": "nna",
+    "foreignkey": "",
+    "renamedfields": "",
+    "main_fields": [
+        "subset_id",
+        "subject"
+    ],
+    "main_view": "table",
+    "has_view": "1",
+    "tie_field": "0",
+    "email_on_new": "0",
+    "email_on_edit": "0",
+    "email_on_delete": "0",
+    "subset_name": "automated",
+    "right_field": "",
+    "query": {
+        "from": {
+            "table": "Notification\\Newsletters\\Automated\\Code\\Tables\\Automated",
+            "alias": "nna",
+            "name": "#__notification_newsletters_automated"
+        },
+        "select": [
+            "nna.id",
+            "nna.subset_id",
+            "ss.title AS subset_id_title",
+            "nna.frequency_id",
+            "nnf.title AS frequency_id_title",
+            "nna.unique_name",
+            "nna.table_name",
+            "nna.email_limit",
+            "nna.subject",
+            "nna.body",
+            "nna.send_date",
+            "nna.parameter_name",
+            "nna.category_field",
+            "nna.category_table",
+            "nna.category_table_mainfield",
+            "nna.extension_path",
+            "nna.published",
+            "nna.created_by",
+            "nna.date_created",
+            "nna.modified_by",
+            "nna.date_modified"
+        ],
+        "leftjoin": [
+            {
+                "table": "System\\Subsets\\Code\\Tables\\Subsets",
+                "alias": "ss",
+                "name": "#__system_subsets",
+                "on": "nna.subset_id = ss.id"
+            },
+            {
+                "table": "Notification\\Newsletters\\Frequencies\\Code\\Tables\\Frequencies",
+                "alias": "nnf",
+                "name": "#__notification_newsletters_frequencies",
+                "on": "nna.frequency_id = nnf.id"
+            }
+        ]
+    }
+}

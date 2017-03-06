@@ -1,0 +1,18 @@
+{
+    "SearchSubsets": {
+        "namespace": "Search\\Subsets",
+        "controller": "SubsetsController"
+    },
+    "SearchKeywords": {
+        "namespace": "Search\\Keywords",
+        "controller": "KeywordsController"
+    },
+    "SearchTerms": {
+        "namespace": "Search\\Terms",
+        "controller": "TermsController"
+    },
+    "SearchIndexes": {
+        "namespace": "Search\\Indexes",
+        "controller": "IndexesController"
+    }
+}

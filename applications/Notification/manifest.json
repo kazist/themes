@@ -1,0 +1,9 @@
+{
+    "name": "notification",
+    "title": "Notification Manager",
+    "icon": "icons\/notification.png",
+    "extension": "component",
+    "path": "notification\/",
+    "description": "Notification Manager",
+    "version": 1
+}

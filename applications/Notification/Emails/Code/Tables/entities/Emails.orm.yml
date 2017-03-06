@@ -1,0 +1,86 @@
+Notification\Emails\Code\Tables\Emails:
+  table: notification_emails
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    subject:
+      name: subject
+      type: text
+      nullable: false
+    body:
+      name: body
+      type: text
+      nullable: false
+    send_date:
+      name: send_date
+      type: datetime
+      nullable: true
+    recipients:
+      name: recipients
+      type: text
+      nullable: false
+    parameters:
+      name: parameters
+      type: text
+      nullable: true
+    attachments:
+      name: attachments
+      type: text
+      nullable: true
+    priority:
+      name: priority
+      type: integer
+      length: 11
+      nullable: true
+    email_type:
+      name: email_type
+      type: string
+      length: 255
+      nullable: false
+    sent_counter:
+      name: sent_counter
+      type: integer
+      length: 11
+      nullable: true
+    completed:
+      name: completed
+      type: integer
+      length: 11
+      nullable: true
+    params:
+      name: params
+      type: text
+      nullable: true
+    uniq_name:
+      name: uniq_name
+      type: string
+      length: 255
+      nullable: false
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks
