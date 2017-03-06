@@ -2,10 +2,22 @@
 *.log
 *.zip
 /cache/
-/applications/
+/nbproject/
 /kazisearchlib/
 /test/
+/tests/
 /uploads/
 /vendor/
+/viewerjs/
 TODO
+
+!application/
+/applications/*
+!application/Contacts/
+!application/Media/
+!application/Notification/
+!application/Search/
+!application/Setup/
+!application/System/
+!application/Users/
 
