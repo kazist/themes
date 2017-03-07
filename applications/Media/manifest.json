@@ -1,6 +1,6 @@
 {
     "name": "media",
-    "title": "Media Manager",
+    "title": "Media Manager ",
     "icon": "icons\/media.png",
     "extension": "component",
     "path": "media\/",
