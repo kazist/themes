@@ -4,7 +4,7 @@
     "description": "Description of project kazist.",
     "keywords": ["kazist", "cms", "code generator", "system builder", "ERP"],
     "homepage": "https://github.com/kazist/kazist",
-    "license": "GPL-2.0",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "dedan",
