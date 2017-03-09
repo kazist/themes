@@ -1,10 +1,16 @@
 {
     "name": "kazist/kazist",
+    "type": "project",
     "description": "Description of project kazist.",
+    "keywords": ["kazist", "cms", "code generator", "system builder", "ERP"],
+    "homepage": "https://github.com/kazist/kazist",
+    "license": "MIT",
     "authors": [
         {
             "name": "dedan",
-            "email": "dedanirungu@gmail.com"
+            "email": "dedanirungu@gmail.com",
+            "homepage": "http://emshyinnovate.com",
+            "role": "Founder & Developer"
         }
     ],
     "require": {
