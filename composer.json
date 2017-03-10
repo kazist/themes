@@ -7,13 +7,14 @@
     "license": "GPL-3.0",
     "authors": [
         {
-            "name": "dedan",
-            "email": "dedanirungu@gmail.com",
+            "name": "Dedan Irungu",
+            "email": "info@emshyinnovate.com",
             "homepage": "http://emshyinnovate.com",
             "role": "Founder & Developer"
         }
     ],
     "require": {
+        "composer/installers": "~1.0",
         "symfony/http-foundation": "*@stable",
         "symfony/http-kernel": "*@stable",
         "symfony/event-dispatcher": "*@stable",
