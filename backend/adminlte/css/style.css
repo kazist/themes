@@ -20,6 +20,14 @@ This file is part of Kazist Framework.
     }
 }
 
+.sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span {
+    margin-left: -17px !important;
+}
+
+.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
+    margin-left: -15px !important;
+}
+
 .skin-black .main-header{
     background: #37474F;
     border: 1px solid transparent;
