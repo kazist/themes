@@ -126,7 +126,7 @@ input[type=text], textarea, select{
 }
 
 .action-search{
-    padding:10px !important;
+    padding:5px 10px !important;
 }
 
 table .item-yesno{
@@ -163,13 +163,6 @@ table .item-yesno{
     clear: both;
 }
 
-.action-search .action_content{
-    padding:5px;
-}
-
-.action-search .search_content{
-    padding:5px;
-}
 
 .action-search .search_content .input-group{
     max-width: 350px;
