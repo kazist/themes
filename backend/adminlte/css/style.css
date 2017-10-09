@@ -135,7 +135,8 @@ table,
     padding:5px;
 }
 
-.kazicode-form-field{
+
+input[type=text], textarea, select{
     max-width:350px; 
 }
 
